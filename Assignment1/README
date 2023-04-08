@@ -1,0 +1,17 @@
+Crystal Wolf
+04/06/2023
+
+Bag of Marbles
+
+Properties (Variable)
+1) What makes up a marble in this program?
+ - a varible named marble
+ - a varible for size, color, amount
+ - a class named marble, then you can give the marble attibutes to desccribe it (color, how many, size, etc)
+
+2) Behaviors (Methods)
+ - A method to add or takeway from the marbles in the bag
+ - A method to show how many marbles are in the bag and what they look like
+ - A method for when the user tries to take a marble out of an empty bag
+
+ 
