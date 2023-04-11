@@ -42,6 +42,12 @@ int main() {
 
 		scanf("%d", &starter.marb);
 
+		if (starter.marb == 0){
+
+			printf("There's no marbles in the bag right now");
+
+		}
+
 		cout << "Marbles in Bag Now: " << starter.marb - starter.marb;
 
 	}
