@@ -14,4 +14,4 @@ Properties (Variable)
  - A method to show how many marbles are in the bag and what they look like
  - A method for when the user tries to take a marble out of an empty bag
 
- 
+ I tested this by running the first two options (1 and 2) and they kind of work? I have some questions to ask to hopefully make this better.
