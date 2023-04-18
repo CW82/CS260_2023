@@ -1,24 +1,26 @@
 Based on what we know about linked lists, stacks, and queues, design a queue data structure:
 
+1) What functions are we likely to need for a queue to function like the one discussed in class?
+- enqueue(), adds
+- dequeue(), removes
+- (Optional) Peek back/front, access the elements in the front/back of the queue
+- Push, adds a new element in the back
+- Pop, removes an element from the front
 
-
-What functions are we likely to need for a queue to function like the one discussed in class?
-
-
-
-What values will we need to know about the structure for our queue to function properly?
-
-
+2) What values will we need to know about the structure for our queue to function properly?
+- What went in first
+- What went in last
+- How large/long the queue is
 
 Based on what we know about linked lists, design a list data structure that allows us to add (insert) or remove (delete) values at a given location in the list (instead of the top of a stack or the front or back of a queue):
 
+3)What functions are we likely to need for a list to function like this?
+- insert()/push(), to add to the list either from the start, end, or a chosen position
+- delete/pop(), to delete a value from the start, end, or a certain position
+- Traverse, so you can access each of the elements in the list
+- search(), to find a certain node in the list
 
-
-What functions are we likely to need for a list to function like this?
-
-
-
-What values will we need to know about the structure for our list to function properly?
-
-
-
+4)What values will we need to know about the structure for our list to function properly?
+- The location of the mem address
+- The value that's being stored
+- How many nodes/elements are in the list
