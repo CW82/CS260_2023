@@ -1,6 +1,26 @@
+Design, implement, and test a Queue data structure that:
+- uses a linked-list to store values in the queue
+- has an enqueue method that will appropriately add a value to the back of the queue as an appropriate element
+- has a dequeue method that will appropriately remove an element from the front of the queue and return its value
+- Optionally has a peek method that returns the value at the front of the queue without removing it
+
+Tests: 
+- Be sure to include at least one test for each piece of functionality 
+  that should verify that your code is working!
+- Be sure to commit changes regularly to your git repo
+
 Linked List:
-- 
+- node
+- some sort of data
+- address of the next node
+
+Queue:
+- enqueue();
+- dequeue();
+- peek(); //bonus 
 
 Linked Queue:
+- front and end pointer 
+- create a linked list
 - enqueue();
 - dequeue();

@@ -12,20 +12,19 @@ struct node {
 
 };
 
-class Stack{
-
-	private:
-		node *top;
-
-	public:
-		void push(int newData);
-		int pop();
-		int peek();
-
-};
-
 int main(){
 
-	
+	return 0;
 
 }
+
+//class likedList{
+
+	//private:
+		//node *front, *back;
+
+	//public:
+		
+
+//};
+
