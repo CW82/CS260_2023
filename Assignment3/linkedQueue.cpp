@@ -5,10 +5,14 @@ using std:: cout;
 using std:: endl;
 using std:: printf;
 
-struct node {
+struct Node {
 
 	int data;
-	node *next;
+	Node *next;
+	
+};
+
+class Queue{
 
 };
 
