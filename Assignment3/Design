@@ -31,7 +31,12 @@ to the front and back
 - Add the enqueue() function so it finds the back of the list
 and creats a new node
 - Update the pointers so they're pointing at the new back
-- Add the dequeue() function so it finds the front of the list, takes the data
+- Add the dequeue() function so it finds the front of the list, deletes the data
 and updates the pointer so it's pointing at the new front 
 - Don't forget to delete the old node
 - Add some print statements so you can see it's actually working
+
+Tests:
+- print statement to make sure the enqueue() added the new data to the BACK
+- print statement to make sure the dequeue() removed the FRONT value
+- print statement to make sure the linked list even worked to begin with 
