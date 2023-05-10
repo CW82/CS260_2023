@@ -1,0 +1,37 @@
+Create a linked list that allows:
+- An add function that takes a value and inserts it into a given position
+in the list (example myList.add(someValue, somePosistion))
+- A remove funtion that takes a position and removes the value stored at 
+that posistion in the list and returns it (example myList.remove(somePosistion))
+- A get function that takes a position and returns that value without removing it
+(example myList.get(somePosition)
+
+Tests:
+- Be sure to include at least one test function for each piece of functionality 
+that should verify that your code is working!  This should be at least one test
+per behavior, likely more.  
+
+Linked List:
+- node
+- some sort of data
+- address of the next node
+
+add():
+- 
+- 
+- 
+
+remove():
+- 
+-
+- 
+
+get():
+- 
+- 
+- 
+
+Tests:
+- 
+- 
+- 
