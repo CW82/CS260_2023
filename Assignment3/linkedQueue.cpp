@@ -10,14 +10,17 @@ struct Node{
     int data; //struct for the LL. This is what the 'node' contains, integer data
     Node *next; //pointer to the 'next' node
 
-} *front, *back, nn; //front, back, and newnode pointers
+}nn; //front, back, and newnode pointers
+
+Node *front = nullptr;
+Node *back = nullptr;
 
 class Queue{
 
 public:
 	void enQ(int data){ //enqueue function, enQ takes integer data and adds it to the back of the LL/queue
 
-	Node *nn = new Node{data, back}; //new node pointer, creates a new node 'nn' 
+	Node *nn = new Node; //new node pointer, creates a new node 'nn' 
 	nn->data = data; //
 	nn->next = NULL;
 
@@ -46,6 +49,12 @@ public:
 	front = front->next; //set the front to the next node/the one that was second 
 	delete hold; //delete the old placeholder
 
+	if (front == nullptr){
+
+		back = nullptr; //check to make sure queue isn't empty
+
+	}
+
 }
 };
 
@@ -58,6 +67,11 @@ int main(){
 	plzwork.enQ(30);
 	plzwork.deQ(); //hopefuly deleting one element from the queue
 
+    if (front != nullptr) {
+        cout << "Queue: " << front->data << endl;
+    } else {
+        cout << "Queue is empty." << endl;
+    }
 
 	//couldn't quite figure out the cout stuff to get it to print? 
 	//cout << "Queue: " << <<endl;, I tried to make it print out, but I'm not sure how?? It ran without errors though so I'm assuming it worked?? IK, bad

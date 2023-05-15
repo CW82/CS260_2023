@@ -11,3 +11,11 @@ struct Node{
     Node *next; //pointer to the 'next' node
 
 };
+
+
+
+int main(){
+
+
+	return 0;
+}
