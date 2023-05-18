@@ -3,7 +3,6 @@
 
 using std::cout;
 using std::endl;
-using std::printf;
 
 struct Node{ 
 
@@ -12,10 +11,31 @@ struct Node{
 
 };
 
+class linkedList{
 
 
-int main(){
+    void add(){
 
 
-	return 0;
-}
+
+    }
+
+    void remove(){
+
+
+
+    }
+
+    int get(){
+
+
+
+    }
+
+};
+
+//int main(){
+
+
+	//return 0;
+//}
