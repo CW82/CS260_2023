@@ -4,7 +4,7 @@ in the list (example myList.add(someValue, somePosistion))
 - A remove funtion that takes a position and removes the value stored at 
 that posistion in the list and returns it (example myList.remove(somePosistion))
 - A get function that takes a position and returns that value without removing it
-(example myList.get(somePosition)
+(example myList.get(somePosition))
 
 Tests:
 - Be sure to include at least one test function for each piece of functionality 
@@ -15,11 +15,18 @@ Linked List:
 - node
 - some sort of data
 - address of the next node
+- pointer to head
 
 add():
-- 
-- 
-- 
+- Create a newNode that has newData
+- Find the desired posistion you want newData to be and -1 so it'll be entered after that position
+- Set the newNode's next to the (position - 1) next and the previous positions next as the newNode's next
+
+Tests/Checks():
+- if the position you want to add to is 1, that's the head so switch the head pointer to newNode 
+- if the previous position's next = NULL, then the positions doesn't exist
+- if the list is empty, i.e head = NULL, make the newNode created the head
+- check for invalid positions/data entered
 
 remove():
 - 
