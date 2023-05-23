@@ -1,3 +1,5 @@
+//autosort
+
 #include <iostream>
 #include <cstdio>
 
