@@ -8,8 +8,7 @@ that posistion in the list and returns it (example myList.remove(somePosistion))
 
 Tests:
 - Be sure to include at least one test function for each piece of functionality 
-that should verify that your code is working!  This should be at least one test
-per behavior, likely more.  
+that should verify that your code is working!  This should be at least one test per behavior, likely more.  
 
 Linked List:
 - node
@@ -29,21 +28,24 @@ Tests/Checks():
 - check for invalid positions/data entered
 
 remove():
-- 
--
-- 
+- Check if the head is = to nullptr, if it is, the list is empty. Print 'empty'
+- Create a temporary pointer, 'temp', that takes the value that's going to be removed
+- Create a variable, 'removedValue', to store the value that's going to be removed
+- Traverse through the list until the node is -1 postion or the end of the list (if it's the end of the list print 'invalid position')
+- Update the temp pointer so it points to the node after -1 position
+- Set the temp pointer's data to the removedValue var
+- Delete the temp pointer and return removedValue
+
+Tests/Checks():
+- if the list is empty
+- check if the positions of the value that's to be removed, if it's 0, update the head pointer
+- if it deleted the right value from the right posistion
 
 get():
-- 
-- 
+- Again, checks for an empty list by seeing if the head = nullptr
+- Create a pointer called 'current' to traverse the list an a var called 'currentPosition' to watch the current position
 - 
 
-Design:
-- 
--
--
-
-Tests:
-- 
-- 
-- 
+Tests/Checks():
+- if it returned the value asked for
+- if you ask for an invalid return i.e a value at say a negative position

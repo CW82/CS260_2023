@@ -118,13 +118,20 @@ int main() {
     myList.add(30, 2);
     myList.add(40, 3);
     myList.add(50, 4);
-    myList.get(1);
     myList.print();
 
     myList.add(60, 1);
     myList.print();
 
     myList.add(60, 50);
+    myList.print();
+
+    myList.remove(2);
+    myList.print();
+
+    myList.get(1);
+    myList.print();
+
 
     return 0;
 }
