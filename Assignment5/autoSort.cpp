@@ -1,4 +1,10 @@
 #include <iostream>
 #include <cstdio>
 
-#include "structureforBST";
+using namespace std;
+
+struct Node{
+
+
+	Node
+}
