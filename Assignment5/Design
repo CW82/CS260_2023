@@ -1,6 +1,6 @@
 Follow along with the in-class exercise on this, do your best to get it working, and turn in what you come up with here!
 
-Be sure to include at least one test for each function or piece of functionality that should verify that your code is working!  No slacking smile, you should start writing some tests before you write your implementations (just spend a few minutes thinking about the design and then write a few tests using natural language (English is preferred for me to be able to read it smile ))
+Be sure to include at least one test for each function or piece of functionality that should verify that your code is working!  No slacking, you should start writing some tests before you write your implementations (just spend a few minutes thinking about the design and then write a few tests using natural language (English is preferred for me to be able to read it smile ))
 
 Create an array-based list or a linked-list (and a bonus for attempting both) that:
 - automatically inserts values in the correct position based on some order of sorting (perhaps ascending integers or lexicographical sorting of words)
@@ -9,3 +9,8 @@ Create an array-based list or a linked-list (and a bonus for attempting both) th
 
 Once you have implemented and tested your code, add to the README file what line(s) of code or inputs and outputs show your work meeting each of the above requirements (or better, include a small screen snip of where it meets the requirement!).
 
+Tests:
+- Before the head
+- After the head
+- In the middle of the head
+- 
