@@ -15,7 +15,7 @@ public:
     Node *head;
 
     linkedList() {
-        head = nullptr;
+        head = nullptr; //empty list
     }
 
     //creates newNode pointer with data

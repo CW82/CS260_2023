@@ -13,4 +13,7 @@ Tests:
 - Before the head
 - After the head
 - In the middle of the head
-- 
+- Duplicate values
+- If the value is in the list 
+- If the value isn't in the list
+
