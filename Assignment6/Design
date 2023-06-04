@@ -11,8 +11,33 @@ Bonus if you implement the three common traversals (pre-order, post-order, in-or
 More Bonus if you also include a breadth-first traversal (sometimes called a level-order search)
 - Analyze and compare the complexity of insert and search as compared to a binary tree without any order in its nodes.
 
+add():
+- check, that's listed below, if the root is the root is NULL
+ if it is, set the value that's to be inserted as the root
+ else, do the following:
+- Check the value that you want inserted against the currentNode's value
+ if it's less than currentNode's value, put it on the left side of the root node
+ else, put it on the right side of the root node 
+
+remove():
+
+
+
 Tests:
-- 
-- 
-- 
-- 
+adding():
+- top of tree
+- bottom of tree
+- middle of tree
+- duplicate?
+- make sure it inerts the value at the right location in the tree
+- check if it's inserting at
+
+removing():
+- make sure it removes the right value
+- top of tree
+- bottom of tree
+- middle of tree
+- a value that's not there?
+
+Note:
+I used the same numbers/values that you used for your example in class 
