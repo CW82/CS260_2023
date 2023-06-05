@@ -9,7 +9,7 @@ public:
     BSTNode *root;
 
     BST() {
-        root = nullptr; // Initialize root to nullptr
+        root = nullptr; // Initialize root to nullptr/empty
     }
 
     //In Order Traversal of the tree
@@ -19,7 +19,7 @@ public:
 
 		}
 
-		cout << current->data << ", "; //print the current's data
+		cout << current->data << "->"; //print the current's data
 
 		if (current->right != nullptr) { //now go down the right side
 			IOT(current->right);
@@ -82,7 +82,7 @@ public:
                 delete temp;
 
             } else {
-                BSTNode *minNode = findMin(node->right); //both have left and right children so find the min data on the right side
+                BSTNode *minNode = Min(node->right); //both have left and right children so find the min data on the right side
                 node->data = minNode->data;
                 node->right = removeNode(node->right, minNode->data); //replace current nodes data with data of the min value then remove
 
@@ -92,7 +92,7 @@ public:
         return node;
     }
 
-    BSTNode *findMin(BSTNode *node) { //to find the min data in the tree. takes the pointer to current node 
+    BSTNode *Min(BSTNode *node) { //to find the min data in the tree. takes the pointer to current node 
         while (node->left != nullptr) { //iterates the left node until it gets the min data and returns a ptr to that min data node
             node = node->left;
         }
@@ -101,9 +101,64 @@ public:
 };
 
 int main() {
-    BST tree;
+    BST BStree;
 
+//adding to the tree
+    BStree.add(10);
+    BStree.add(40);
+    BStree.add(60);
+    BStree.add(30);
+    BStree.add(70);
+    BStree.add(50);
+    BStree.add(20);
 
+//printing the tree out
+    cout << "In-Order Traversal: ";
+    BStree.IOT(BStree.root);
+    cout << endl;
+
+//removing something from the tree
+    BStree.remove(20);
+    BStree.remove(40); 
+
+    cout << "In-Order Traversal(Remove random): ";
+    BStree.IOT(BStree.root);
+    cout << endl;   
+
+//add a new root
+    BStree.add(1);
+
+    cout << "In-Order Traversal (New Root): ";
+    BStree.IOT(BStree.root);
+    cout << endl;  
+
+//add a duplicate
+    BStree.add(10);
+
+    cout << "In-Order Traversal (Duplicate): ";
+    BStree.IOT(BStree.root);
+    cout << endl; 
+
+//Remove the top
+    BStree.remove(1);
+
+    cout << "In-Order Traversal (Top removed): ";
+    BStree.IOT(BStree.root);
+    cout << endl;
+
+//removed bottom
+    BStree.remove(70);
+
+    cout << "In-Order Traversal (Bottom removed): ";
+    BStree.IOT(BStree.root);
+    cout << endl;
+
+//remove data that's not there
+    BStree.remove(90);
+
+    cout << "In-Order Traversal (Data not there): ";
+    BStree.IOT(BStree.root);
+    cout << endl;
 
     return 0;
 }

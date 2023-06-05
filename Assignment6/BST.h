@@ -1,10 +1,10 @@
 
 
-struct BSTNode {
+struct BSTNode { //struct for the data to be enterered on the tree and the left and right pointers
 
     int data;
-    BSTNode* left;
-    BSTNode* right;
+    BSTNode *left;
+    BSTNode *right;
 
     BSTNode(int value) {
         data = value;

@@ -20,8 +20,10 @@ add():
  else, put it on the right side of the root node 
 
 remove():
-
-
+- check if the root is null, if it is, return the root
+- if the data is less than the root, set the root's left to be travered for a node to be removed. Do the same if it's the right side
+- check if the root & l & r nullptr, if true, then return null
+- if it only has a left child, return left. Do the same with the right
 
 Tests:
 adding():
