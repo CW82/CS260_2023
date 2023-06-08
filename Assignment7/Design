@@ -1,6 +1,32 @@
 Create a design before you begin to code that describes or shows how we can store data in a hash table and what kind of problem we could solve with a hash table.
 
+How To:
+- Determine the size/capacity you want your table to have
+
+- Chose what data you want in your table (ints, string, etc) (key) and determine what the key/value pair will be
+
+- Make a hash function, that takes the key (ints, string, etc) and outputs a hashcode (puts the keys in the hashtable, without any collision hopefully)
+
+- Calculate where the key is going to go (using ASCII or some other formular for figuring out how you're going to add your keys to the table)
+
+- Some function to deal with collisions
+
+- Using a class, store the converted data in the table. Use the hash function from ealier on each key to determine where it should go on the table
+
+What Problems Can You Solve With Hashtable?
+- A quick lookup for phone numbers or words in a dictionary
+
+- Can find duplicates in the table
+
+- Can find the frequency that something appears in the table. Can be used for something like tracking how many times a word was used and other similar things
+
 Create some tests (at least one per piece of functionality) before you begin coding that you want your hashtable to pass before you start coding.
+
+- Inserting, it should be able to insert the key to the right spot in the table with the given equation
+
+- For the first part, if collision happens, it should overwrite the one that was ther origianlly
+
+- For the contains, check if the table is empty. If it is, return, 'the table is empty, please add a value first'
 
 Create a hashtable that resolves collisions by simply overwriting the old value with the new value, including at least:
 - Describe the way that you decide on hashing a value
@@ -12,3 +38,4 @@ Create a hashtable that resolves collisions by simply overwriting the old value 
 Then create a smarter hashtable (double hashing or chaining) including at least the same functions as the simple hashtable
 
 Compare some information relating to collisions (frequency) and their effect on complexity (of insert and contains methods)
+
