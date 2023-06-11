@@ -21,7 +21,6 @@ What Problems Can You Solve With Hashtable?
 - Can find the frequency that something appears in the table. Can be used for something like tracking how many times a word was used and other similar things
 
 Create some tests (at least one per piece of functionality) before you begin coding that you want your hashtable to pass before you start coding.
-
 - Inserting, it should be able to insert the key to the right spot in the table with the given equation
 
 - For the first part, if collision happens, it should overwrite the one that was ther origianlly
