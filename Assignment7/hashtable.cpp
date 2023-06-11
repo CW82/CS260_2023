@@ -1,73 +1,64 @@
 #include "HT.h"
 
-//sets 'size' to 0, sets 'capacity' to the initialSize, and then allocates an array of strings (values) with the capacity stated
-hashTable::hashTable (int initialSize) {
-	size = 0;
-	capacity = initialSize;
-
-	values = new string [capacity];
-
+hashTable::hashTable (int initialCapacity) { 
+    size = 0; //set the size of the table to 0 to start with
+    capacity = initialCapacity; //set the capacity to whatever i siad the initialCap was
+    values = new string[capacity]; // allocates array of strings, called 'values', with the capacity from above
 }
 
-//destructor, frees the allocated memory that was used for values above using 'delete'
 hashTable::~hashTable () {
-	delete [] values;
+    delete[] values; //frees the memory made above using delete
+}
+
+//adds based on where the letter is in the alphabet (a = 1, b = 2, c = 3, etc)
+int hashTable::hash (string key) {
+    int result = 0; //starts off at 0
+
+    for (auto character : key) { //itterates over all the char in the string,
+        char lower = tolower (character); // if it's an upper case letter, convert to lower (had to look how to do that lol)
+
+        if (isalpha(lower)) {
+            result += (tolower(lower) - 'a'); 
+
+        }
+    }
+    return result % capacity; //devides by however big the table is using modulo so it fits on the table
 
 }
 
-//hashes, the equation to figure out which key = which value
-int hashTable :: hash (string key) {
-	int result = 0; //holds the value of the key after its calculated, initally starts at 0
+//add a key to the table
+int hashTable::add (string newKey) { 
+    int index = hash (newKey); //takes the equation from above and do it to the key
 
-	for (auto character : key) { //for loop that goes to each letter in the 'key' (given word)
-		char lower = tolower(character); //converts capital letters to lower case (i had to look up how to do that lol)
+    if (values[index] == " " && newKey != " ") { //if it's empty and the key isn't empty
+        size++; //increase the size by one
 
-		if (isalpha(lower)) { 
-			result += (tolower(lower) - 'a'); //it (-) the ASCII value of the letter 'a' - the letter it's iterating over at that point
+    } else {
+        values[index] = newKey; //otherwise overwrite
 
-		}
-	}
-	return result % capacity; //modulo the result by the size of the table so the key fits on the table
-
-}
-
-//adds a new key to the table
-int hashTable :: add (string newkey) {
-	int result = 0;
-
-	int index = hash(newkey); //uses the hash function tp figure out where to add on the table
-
-	if (values[index] == "" && newkey != "") { //if values are empty at the index and the 'newkey' isn't an empty string
-		size ++; //increase the size by 1
-
-	} else { //otherwise, if there's a collision, return -1
-		result = -1;
-
-		values[index] = newkey;
-
-		return result;
-	}
-	values[index] = newkey;
-	return result;
+    }
+    return 0;
 
 }
 
+//find the value associated with the key
+string hashTable::find (string key) {
+    int index = hash (key); //runs the hash to find the index that the key you're looking for 
 
-//finding a key in the hashtable
-string hashTable :: find (string key) { 
-	string result = "";
+    if (values[index] == key) { //if it matches, return the value that was found there
+        return values[index];
 
-	int index = hash (key); //calculates which index the key had using the 'hash' function
-
-	result = values[index]; //sets the result to the value that was found at the index
-
-	if (result != key) { //if the value that was returned doesn't match the key, return an empty string
-		result = "";
-
-	}
-	return result;
+    }
+    return ""; //otherwise return nothing to show there wasn't anything
 
 }
 
-int hashTable :: getSize () { return size;} //return the current size and capacity
-int hashTable :: getCapacity () {return capacity;}
+int hashTable::getSize () {
+    return size;
+
+}
+
+int hashTable::getCapacity () {
+    return capacity;
+
+}
