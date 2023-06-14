@@ -1,25 +1,26 @@
-#include <vector>
-
 #include "graphNode.h"
 
-using std :: vector;
-
-//empty string
-graphNode :: graphNode () {
-	value = " ";
-	//vector<graphNode *> neighbors is a direct object, not a pointer to one, so when this graphNode gets constructed, that direct objects gets contructed
-
+GraphNode::GraphNode(string newName) {
+    value = newName;
+    // vector<GraphNode *> neighbors is a direct object, not a pointer to one, so when this GraphNode gets constructed, that direct object gets constructed
 }
 
-void graphNode :: addEdge (graphNode *destination, int weight) {
-	edge *newEdge = new edge{this, destination, weight};
-	neighbors.push_back(newEdge);
+GraphNode::~GraphNode() {
+    for(auto neighbor: neighbors) {
+        delete neighbor; // may cause issues modifying our collection object while accessing our collection object...
+    }
+    neighbors.clear();
 }
 
-string graphNode :: getValue() {
-	return value;
+void GraphNode::addEdge(GraphNode *destination, int weight) {
+    edge *newEdge = new edge{this, destination, weight};
+    neighbors.push_back(newEdge);
 }
 
-vector <edge *> graphNode :: getNeighbor() {
-	return neighbors;
+string GraphNode::getValue() {
+    return value;
+}
+
+vector<edge *> GraphNode::getNeighbors() {
+    return neighbors;
 }

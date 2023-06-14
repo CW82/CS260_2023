@@ -2,10 +2,12 @@
 
 #include "graphNode.h"
 
-class graphNode;
+class GraphNode;
 
 struct edge {
-	graphNode *source;
-	graphNode *destination;
-	int weight;
+
+    GraphNode *source;
+    GraphNode *destination;
+    int weight;
+	
 };
